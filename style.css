@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 0;
+  background-color: #ffffff;
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+}
+
+nav {
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+nav a {
+  color: #000000;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+main {
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.boton-cita {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.boton-cita:hover {
+  background-color: #0077cc;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #f4f4f4;
+  color: #000000;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+    font-size: 1.1rem;
+  }
+
+  .logo {
+    width: 100%;
+    height: auto;
+  }
+
+  .boton-cita {
+    display: block;
+    width: 100%;
+    font-size: 1.2rem;
+  }
+
+  section {
+    padding: 1rem;
+  }
+}
