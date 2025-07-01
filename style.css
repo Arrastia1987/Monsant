@@ -26,7 +26,9 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 .logo {
   width: 180px;
   height: auto;
@@ -279,3 +281,66 @@ h2 {
 .redes-flotantes a img:hover {
   transform: scale(1.15);
 }
+#equipo {
+  margin: 5rem 1;
+  text-align: center;
+}
+
+#equipo h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #1e90ff;
+}
+
+.equipo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.equipo-grid article {
+  width: 180px;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.equipo-grid img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%; /* redondo */
+  margin-bottom: 0.5rem;
+}
+
+.equipo-grid h3 {
+  font-size: 1rem;
+  mar
+
+  .galeria-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 0rem;
+    padding: 1rem 0;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .galeria-scroll img {
+    width: 10px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    flex-shrink: 1;
+    scroll-snap-align: start;
+    box-shadow: 0 5px 12px rgba(1,1,1,1.1);
+    transition: transform 1.5s ease;
+  }
+
+  .galeria-scroll img:hover {
+    transform: scale(1.05);
+  }
+
