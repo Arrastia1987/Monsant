@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,97 +10,107 @@ body {
   background-color: #ffffff;
   color: #333333;
   line-height: 1.6;
-}
-
-header {
-  text-align: center;
-  padding: 2rem 0;
-  background-color: #ffffff;
-}
-
-.logo {
-  max-width: 100%;
-  height: auto;
-}
-
-nav {
-  background-color: #f4f4f4;
-  text-align: center;
-  padding: 1rem 0;
-}
-
-nav a {
-  color: #000000;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
-}
-
-main {
   padding: 2rem;
 }
 
-section {
+header {
+  background-color: #f9f9f9;
+  padding: 1.5rem 2rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  width: 220px;
+  height: auto;
+  display: block;
   margin-bottom: 2rem;
 }
 
 h2 {
+  font-size: 2rem;
   margin-bottom: 1rem;
-  font-size: 1.5rem;
+  color: #1e90ff;
+  font-weight: 600;
 }
 
-.boton-cita {
-  display: inline-block;
-  padding: 1rem 2rem;
-  font-size: 1.2rem;
-  font-weight: bold;
-  background-color: #1e90ff;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
+.contacto-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
   margin-top: 1rem;
 }
 
-.boton-cita:hover {
-  background-color: #0077cc;
+.mapa {
+  flex: 1 1 60%;
 }
 
-footer {
+.info-redes {
+  flex: 1 1 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.redes {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.redes img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.2s ease;
+}
+
+.redes img:hover {
+  transform: scale(1.1);
+}
+
+.boton-cita {
+  margin-top: 1rem;
+  padding: 12px 24px;
+  background-color: #25D366;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
   text-align: center;
-  padding: 1rem;
-  background-color: #f4f4f4;
-  color: #000000;
-  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.boton-cita:hover {
+  background-color: #1da851;
+}
+
+.invisible {
+  display: none;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 768px) {
-  body {
-    font-size: 1rem;
-    padding: 1rem;
+  .contacto-contenedor {
+    flex-direction: column;
   }
 
-  nav a {
-    display: block;
-    margin: 10px 0;
-    font-size: 1.1rem;
-  }
-
-  .logo {
+  .mapa, .info-redes {
     width: 100%;
-    height: auto;
   }
 
-  .boton-cita {
-    display: block;
-    width: 100%;
-    font-size: 1.2rem;
-  }
-
-  section {
-    padding: 1rem;
+  .redes {
+    justify-content: start;
   }
 }
