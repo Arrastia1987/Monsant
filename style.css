@@ -172,11 +172,11 @@ h2 {
   margin-top: 1rem;
   display: inline-block;
   background-color: #4285F4;
-  color: white;
+  color: white !important;
   padding: 12px 20px;
   border-radius: 6px;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.5s ease;
 }
 
 .boton-google:hover {
