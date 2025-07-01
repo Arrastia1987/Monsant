@@ -13,18 +13,74 @@ body {
   padding: 2rem;
 }
 
-header {
-  background-color: #f9f9f9;
+.header-minimal {
+  background-color: white;
   padding: 1.5rem 2rem;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #eee;
+}
+
+.contenedor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .logo {
-  width: 220px;
+  width: 180px;
   height: auto;
-  display: block;
-  margin-bottom: 2rem;
+}
+
+.menu-minimal ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-minimal a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.menu-minimal a:hover {
+  color: #1e90ff;
+}
+
+.encabezado {
+  background-image: url('encabezado.jpg'); /* imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+/* Contenedor que alinea el logo */
+.contenedor-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Tamaño del logo */
+.logo {
+  width: 220px;
+  max-width: 90%;
+  height: auto;
+}
+
 }
 
 h2 {
