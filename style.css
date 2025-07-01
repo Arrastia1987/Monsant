@@ -157,3 +157,44 @@ h2 {
     justify-content: start;
   }
 }
+.info-redes p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+
+.info-redes a {
+  text-decoration: none;
+  color: #1e90ff;
+}
+
+.boton-google {
+  margin-top: 1rem;
+  display: inline-block;
+  background-color: #4285F4;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.boton-google:hover {
+  background-color: #3367d6;
+}
+
+.info-redes .redes {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.info-redes .redes img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.2s ease;
+}
+
+.info-redes .redes img:hover {
+  transform: scale(1.1);
+}
