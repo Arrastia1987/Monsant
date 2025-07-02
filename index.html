@@ -12,7 +12,7 @@
   <header class="header-minimal">
     <div class="contenedor-header">
       <a href="#top" class="logo-link">
-        <img src="iconos/logo-mst_3.jpg" alt="Logo Monsant" class="logo">
+        <img src="iconos/logo mst_3.jpg" alt="Logo Monsant" class="logo">
       </a>
       <nav class="menu-minimal">
         <ul>
@@ -69,6 +69,27 @@
       </div>
     </section>
 
+    <section id="carrusel" class="fade-in">
+      <h2>Galería de Resultados</h2>
+      <div class="carrusel-contenedor">
+        <div class="carrusel-slide active">
+          <img src="imagenes/antes1.jpg" alt="Resultado 1">
+        </div>
+        <div class="carrusel-slide">
+          <img src="imagenes/antes2.jpg" alt="Resultado 2">
+        </div>
+        <div class="carrusel-slide">
+          <img src="imagenes/antes3.jpg" alt="Resultado 3">
+        </div>
+        <div class="carrusel-slide">
+          <img src="imagenes/antes4.jpg" alt="Resultado 4">
+        </div>
+        <button class="carrusel-prev">&#10094;</button>
+        <button class="carrusel-next">&#10095;</button>
+      </div>
+    </section>
+
+    
     <section id="contacto" class="fade-in">
       <h2>Contáctanos</h2>
       <div class="contacto-contenedor">
@@ -105,5 +126,35 @@
       <img src="iconos/tik-tok.png" alt="TikTok">
     </a>
   </div>
+  
+  <script>
+    const slides = document.querySelectorAll('.carrusel-slide');
+    const prevBtn = document.querySelector('.carrusel-prev');
+    const nextBtn = document.querySelector('.carrusel-next');
+    let index = 0;
+
+    function showSlide(i) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[i].classList.add('active');
+    }
+
+    prevBtn.addEventListener('click', () => {
+      index = (index === 0) ? slides.length - 1 : index - 1;
+      showSlide(index);
+    });
+
+    nextBtn.addEventListener('click', () => {
+      index = (index + 1) % slides.length;
+      showSlide(index);
+    });
+
+    // Auto avance opcional
+    setInterval(() => {
+      index = (index + 1) % slides.length;
+      showSlide(index);
+    }, 5000);
+  </script>
+
+  
 </body>
 </html>

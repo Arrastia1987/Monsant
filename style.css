@@ -291,3 +291,60 @@ h2 {
     justify-content: flex-start;
   }
 }
+
+#carrusel {
+  margin: 4rem auto;
+  text-align: center;
+  max-width: 800px;
+}
+
+.carrusel-contenedor {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.carrusel-slide {
+  display: none;
+  width: 100%;
+}
+
+.carrusel-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.carrusel-slide.active {
+  display: block;
+}
+
+.carrusel-prev,
+.carrusel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(30, 144, 255, 0.8);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 2rem;
+  border-radius: 50%;
+  z-index: 10;
+  transition: background-color 0.2s ease;
+}
+
+.carrusel-prev:hover,
+.carrusel-next:hover {
+  background-color: #1e90ff;
+}
+
+.carrusel-prev {
+  left: 10px;
+}
+
+.carrusel-next {
+  right: 10px;
+}
