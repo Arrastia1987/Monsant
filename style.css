@@ -1,18 +1,23 @@
-
+/* ---------------------- RESET ---------------------- */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Helvetica Neue', sans-serif;
   background-color: #ffffff;
-  color: #333333;
+  color: #333;
   line-height: 1.6;
   padding: 2rem;
 }
 
+/* ---------------------- HEADER ---------------------- */
 .header-minimal {
   background-color: white;
   padding: 1.5rem 2rem;
@@ -26,33 +31,17 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
-html {
-  scroll-behavior: smooth;
-}
+
 .logo {
   width: 180px;
+  max-width: 90%;
   height: auto;
 }
-
-.icono-bandera {
-  width: 16px;
-  height: 16px;
-  margin-right: 6px;
-  vertical-align: middle;
-}
-.idioma {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
 
 .menu-minimal ul {
   list-style: none;
   display: flex;
   gap: 2rem;
-  margin: 0;
-  padding: 0;
 }
 
 .menu-minimal a {
@@ -69,94 +58,30 @@ html {
   color: #1e90ff;
 }
 
-.encabezado {
-  background-image: url('encabezado.jpg'); /* imagen de fondo */
-  background-size: cover;
-  background-position: center;
-  height: 300px;
+/* ---------------------- IDIOMA ---------------------- */
+.icono-bandera {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.idioma {
   display: flex;
   align-items: center;
-  padding: 0 2rem;
+  gap: 6px;
 }
 
-/* Contenedor que alinea el logo */
-.contenedor-header {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Tamaño del logo */
-.logo {
-  width: 220px;
-  max-width: 90%;
-  height: auto;
-}
-
-}
-
+/* ---------------------- SECCIONES ---------------------- */
 h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
   color: #1e90ff;
   font-weight: 600;
-}
-
-.contacto-contenedor {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin-top: 1rem;
-}
-
-.mapa {
-  flex: 1 1 60%;
-}
-
-.info-redes {
-  flex: 1 1 35%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.redes {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.redes img {
-  width: 32px;
-  height: 32px;
-  transition: transform 0.2s ease;
-}
-
-.redes img:hover {
-  transform: scale(1.1);
-}
-
-.boton-cita {
-  margin-top: 1rem;
-  padding: 12px 24px;
-  background-color: #25D366;
-  color: white;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  text-decoration: none;
-  display: inline-block;
   text-align: center;
-  transition: background-color 0.2s ease;
 }
 
-.boton-cita:hover {
-  background-color: #1da851;
-}
-
+/* ---------------------- SERVICIOS ---------------------- */
 #servicios {
   margin: 3rem 0;
 }
@@ -195,39 +120,61 @@ h2 {
   color: #555;
 }
 
-.invisible {
-  display: none;
+/* ---------------------- EQUIPO ---------------------- */
+#equipo {
+  margin: 5rem 0;
+  text-align: center;
 }
 
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 1s ease-in forwards;
+.equipo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
 }
 
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
+.equipo-grid article {
+  width: 180px;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.05);
+  text-align: center;
 }
 
-@media (max-width: 768px) {
-  .contacto-contenedor,
-  .servicios-contenedor {
-    flex-direction: column;
-  }
-
-  .servicio {
-    width: 100%;
-  }
-
-  .mapa, .info-redes {
-    width: 100%;
-  }
-
-  .redes {
-    justify-content: start;
-  }
+.equipo-grid img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
 }
+
+.equipo-grid h3 {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: #1e90ff;
+}
+
+/* ---------------------- CONTACTO ---------------------- */
+.contacto-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.mapa {
+  flex: 1 1 60%;
+}
+
+.info-redes {
+  flex: 1 1 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .info-redes p {
   font-size: 1rem;
   margin-bottom: 0.5rem;
@@ -237,6 +184,23 @@ h2 {
 .info-redes a {
   text-decoration: none;
   color: #1e90ff;
+}
+
+.boton-cita {
+  margin-top: 1rem;
+  padding: 12px 24px;
+  background-color: #25D366;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  display: inline-block;
+  transition: background-color 0.2s ease;
+}
+
+.boton-cita:hover {
+  background-color: #1da851;
 }
 
 .boton-google {
@@ -254,21 +218,24 @@ h2 {
   background-color: #3367d6;
 }
 
-.info-redes .redes {
+/* ---------------------- REDES ---------------------- */
+.redes {
   display: flex;
   gap: 1rem;
   margin-top: 1rem;
 }
 
+.redes img,
 .info-redes .redes img {
   width: 32px;
   height: 32px;
   transition: transform 0.2s ease;
 }
 
-.info-redes .redes img:hover {
+.redes img:hover {
   transform: scale(1.1);
 }
+
 .redes-flotantes {
   position: fixed;
   top: 40%;
@@ -294,43 +261,33 @@ h2 {
 .redes-flotantes a img:hover {
   transform: scale(1.15);
 }
-#equipo {
-  margin: 5rem 1;
-  text-align: center;
+
+/* ---------------------- EFECTO FADE-IN ---------------------- */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
 }
 
-#equipo h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #1e90ff;
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 
-.equipo-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
+/* ---------------------- RESPONSIVE ---------------------- */
+@media (max-width: 768px) {
+  .contacto-contenedor,
+  .servicios-contenedor {
+    flex-direction: column;
+  }
+
+  .servicio,
+  .mapa,
+  .info-redes {
+    width: 100%;
+  }
+
+  .redes {
+    justify-content: flex-start;
+  }
 }
-
-.equipo-grid article {
-  width: 180px;
-  background-color: #f9f9f9;
-  padding: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 5px 12px rgba(0,0,0,0.05);
-  text-align: center;
-}
-
-.equipo-grid img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 50%; /* redondo */
-  margin-bottom: 0.5rem;
-}
-
-.equipo-grid h3 {
-  font-size: 1rem;
-  mar
-
-  
