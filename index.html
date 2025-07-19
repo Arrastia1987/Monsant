@@ -9,6 +9,28 @@
         function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-LYZ19RY8VX');
     </script>
     
+    <script>
+    // Define dataLayer y la función gtag.
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    // Configura el consentimiento predeterminado para regiones concretas según tus requisitos
+    gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'regions':[<list of ISO 3166-2 region codes>]
+    });
+    // Define el consentimiento predeterminado de todas las demás regiones según tus requisitos
+    gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+    });
+    </script>
+    <!-- PASTE YOUR COOKIEHUB CMP CODE SNIPPET HERE -- >
+    
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Monsant Especialistas en Odontología</title>
@@ -177,6 +199,7 @@
       showSlide(index);
     }, 5000);
   </script>
+  
   
 </body>
 </html>
