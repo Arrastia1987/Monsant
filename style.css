@@ -121,39 +121,52 @@ h2 {
 }
 
 /* ---------------------- EQUIPO ---------------------- */
-#equipo {
-  margin: 5rem 0;
-  text-align: center;
-}
-
 .equipo-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
+  margin-top: 2rem;
 }
 
-.equipo-grid article {
-  width: 180px;
+.tarjeta-equipo {
+  width: 200px;
   background-color: #f9f9f9;
   padding: 1rem;
   border-radius: 12px;
-  box-shadow: 0 5px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.05);
   text-align: center;
+  transition: transform 0.3s ease;
 }
 
-.equipo-grid img {
-  width: 120px;
-  height: 120px;
+.tarjeta-equipo:hover {
+  transform: translateY(-5px);
+}
+
+.foto-cuadrada {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+}
+
+.foto-cuadrada img {
+  width: 100%;
+  height: 130%;
   object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 0.5rem;
+  display: block;
 }
 
-.equipo-grid h3 {
+.tarjeta-equipo h3 {
   font-size: 1rem;
   margin: 0.5rem 0;
   color: #1e90ff;
+}
+
+.tarjeta-equipo p {
+  font-size: 0.9rem;
+  color: #444;
 }
 
 /* ---------------------- CONTACTO ---------------------- */
