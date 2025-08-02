@@ -17,46 +17,102 @@ body {
   padding: 2rem;
 }
 
-/* ---------------------- HEADER ---------------------- */
+/* HEADER GENERAL */
 .header-minimal {
   background-color: white;
-  padding: 1.5rem 2rem;
+  padding: 1.2rem 1.5rem;
   border-bottom: 1px solid #eee;
 }
 
+/* FLEX WRAP para que no desborde */
 .contenedor-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
+  gap: 1rem;
 }
 
+/* Logo */
 .logo {
   width: 180px;
-  max-width: 90%;
+  max-width: 100%;
   height: auto;
 }
 
+/* Menú principal */
 .menu-minimal ul {
   list-style: none;
   display: flex;
   gap: 2rem;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
 }
 
-.menu-minimal a {
+.menu-minimal li {
+  display: flex;
+  align-items: center;
+}
+
+/* Enlaces */
+.menu-minimal a,
+.menu-minimal button {
   text-decoration: none;
   color: #111;
   font-weight: 500;
-  letter-spacing: 0.05em;
   font-size: 0.95rem;
   text-transform: uppercase;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
   transition: color 0.3s ease;
 }
 
-.menu-minimal a:hover {
+.menu-minimal a:hover,
+.menu-minimal button:hover {
   color: #1e90ff;
 }
+
+/* Icono de idioma */
+.icono-bandera {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.idioma {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* RESPONSIVE HEADER */
+@media (max-width: 768px) {
+  .contenedor-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-minimal ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  .menu-minimal {
+    width: 100%;
+  }
+
+  .logo {
+    width: 160px;
+  }
+}
+
 
 /* ---------------------- IDIOMA ---------------------- */
 .icono-bandera {
