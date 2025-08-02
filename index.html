@@ -9,12 +9,35 @@
         function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-LYZ19RY8VX');
     </script>
     
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Monsant Odontología">
+    <link rel="canonical" href="https://www.monsantsmile.com/">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Monsant Especialistas en Odontología</title>
+  <title>Servicios Odontológicos en Medellín</title>
+  <meta name="keywords" content="odontología Medellín, Monsant, ortodoncia Medellín, limpieza dental Medellín, implantes dentales Medellín, estética dental, odontólogo Laureles, blanqueamiento dental, odontología estética, odontología moderna, Monsant odontología, Diseño de sonrisa, Implantes, Coronas">
+  <meta name="description" content="Consultorio odontológico Monsant en Medellín. Expertos en estética dental, ortodoncia invisible, limpieza y blanqueamiento dental. Atención profesional en Laureles. Diseño de sonrisa. Implantes. Coronas">
+
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="iconos/favicon.png">
 </head>
+<script>
+  const toggleBtn = document.getElementById('toggle-lang');
+  toggleBtn.addEventListener('click', () => {
+    const isEnglish = toggleBtn.textContent.includes('English');
+    document.getElementById('servicios').style.display = isEnglish ? 'none' : 'block';
+    document.getElementById('servicios-en')?.style.display = isEnglish ? 'block' : 'none';
+    toggleBtn.innerHTML = isEnglish
+      ? '<img src="iconos/spanish.png" class="icono-bandera"> Español'
+      : '<img src="iconos/english.png" class="icono-bandera"> English';
+  });
+</script>
+
+<link rel="apple-touch-icon" sizes="180x180" href="iconos/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="iconos/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="iconos/favicon-16x16.png">
+
 <body id="top">
   <header class="header-minimal">
     <div class="contenedor-header">
@@ -23,11 +46,13 @@
       </a>
       <nav class="menu-minimal">
         <ul>
-          <li>
-            <a href="#idioma" class="idioma">
-              <img src="iconos/english.png" alt="English" class="icono-bandera"> English
-            </a>
-          </li>
+            <!-- Sustituye el enlace de idioma por un botón -->
+            <li>
+              <button id="toggle-lang" class="idioma">
+                <img src="iconos/english.png" alt="English" class="icono-bandera"> English
+              </button>
+            </li>
+
           <li><a href="#servicios">Servicios</a></li>
           <li><a href="#equipo">Equipo</a></li>
           <li><a href="#carrusel">Resultados</a></li>
@@ -139,9 +164,10 @@
   </p>
 
   <div class="redes-flotantes">
-    <a href="https://wa.me/573045822043" target="_blank" aria-label="WhatsApp Monsant">
-      <img src="iconos/whatsapp.png" alt="WhatsApp">
-    </a>
+      <a href="https://wa.me/573045822043" target="_blank" aria-label="Agendar cita por WhatsApp">
+        <img src="iconos/whatsapp.png" alt="WhatsApp">
+      </a>
+
     <a href="https://www.instagram.com/monsant_odontologia" target="_blank" aria-label="Instagram Monsant">
       <img src="iconos/instagram.png" alt="Instagram">
     </a>
