@@ -28,29 +28,33 @@
 <link rel="icon" type="image/png" sizes="16x16" href="iconos/favicon-16x16.png">
 
 <body id="top">
-  <header class="header-minimal">
-    <div class="contenedor-header">
-      <a href="#top" class="logo-link">
-        <img src="iconos/logo mst_3.jpg" alt="Logo Monsant" class="logo">
-      </a>
-      <nav class="menu-minimal">
-        <ul>
-            <!-- Sustituye el enlace de idioma por un botón -->
+    <header class="header-minimal">
+      <div class="contenedor-header">
+        <a href="#top" class="logo-link">
+          <img src="iconos/logo mst_3.jpg" alt="Logo Monsant" class="logo">
+        </a>
+
+        <button class="hamburguesa" id="menu-toggle" aria-label="Abrir menú">
+          ☰
+        </button>
+
+        <nav class="menu-minimal" id="menu">
+          <ul>
             <li>
               <button id="toggle-lang" class="idioma">
                 <img src="iconos/english.png" alt="English" class="icono-bandera"> English
               </button>
             </li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#equipo">Equipo</a></li>
+            <li><a href="#carrusel">Resultados</a></li>
+            <li><a href="#testimonios">Testimonios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#equipo">Equipo</a></li>
-          <li><a href="#carrusel">Resultados</a></li>
-          <li><a href="#testimonios">Testimonios</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
   <main>
     <section id="servicios" class="fade-in">
@@ -108,18 +112,6 @@
         </div>
         <div class="carrusel-slide">
           <img src="imagenes/antes4.jpg" alt="Resultado 4">
-        </div>
-        <div class="carrusel-slide">
-          <img src="imagenes/antes5.jpg" alt="Resultado 4">
-        </div>
-        <div class="carrusel-slide">
-          <img src="imagenes/antes6.jpg" alt="Resultado 4">
-        </div>
-        <div class="carrusel-slide">
-          <img src="imagenes/antes7.jpg" alt="Resultado 4">
-        </div>
-        <div class="carrusel-slide">
-          <img src="imagenes/antes8.jpg" alt="Resultado 4">
         </div>
         <button class="carrusel-prev">&#10094;</button>
         <button class="carrusel-next">&#10095;</button>
@@ -206,6 +198,16 @@
         : '<img src="iconos/english.png" class="icono-bandera"> English';
     });
   </script>
+  
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+
+    menuToggle.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
+
   
 </body>
 </html>
